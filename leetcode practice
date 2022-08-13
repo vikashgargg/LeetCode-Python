@@ -1,1 +1,12 @@
+Two Sum:
 
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        maps = dict()
+        for i in range(len(nums)):
+            x=nums[i]
+            y=target-x
+            if x in maps:
+                return [maps[x],i]
+            else:
+                maps[y]=i
